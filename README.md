@@ -1,1 +1,1 @@
-# Sample Dropwizard service
+# Registration and Login service with Dropwizard
