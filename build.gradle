@@ -1,11 +1,20 @@
 apply plugin: 'java'
 apply plugin: 'idea'
 
+version = '0.1'
+
 repositories {
-	mavenCentral()
+    mavenCentral()
 }
 
 dependencies {
-	compile "io.dropwizard:dropwizard-core:0.8.0"
+    compile 'io.dropwizard:dropwizard-core:0.8.0'
 }
 
+apply plugin: 'application'
+
+mainClassName = 'com.example.helloworld.HelloWorldApplication'
+
+run {
+    args 'server', './src/dist/config/hello-world.yml'
+}
